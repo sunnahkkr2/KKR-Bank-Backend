@@ -1,6 +1,7 @@
 const transactionRoutes = require("./routes/transaction");
 const userRoutes = require("./routes/user");
 const authRoutes = require("./routes/auth");
+const monnifyRoutes = require("./routes/monnify");
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/transaction", transactionRoutes);
+app.use("/api/monnify", monnifyRoutes);
 
 // Test route
 app.get("/", (req, res) => {
