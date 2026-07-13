@@ -13,10 +13,11 @@ connectDB();
 
 // Middleware
 app.use(cors());
+app.use(express.json());
+
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/transaction", transactionRoutes);
-app.use(express.json());
 
 // Test route
 app.get("/", (req, res) => {
