@@ -7,6 +7,7 @@ const generateAccountNumber = () => {
 };
 
 exports.register = async (req, res) => {
+console.log("Request body:", req.body);
   try {
     const { fullName, email, phone, password } = req.body;
 
